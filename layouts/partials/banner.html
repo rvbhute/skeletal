@@ -10,12 +10,14 @@
   <div class="column">
     <ul id="page-nav">
       {{ range .Site.Menus.main }}
-        <li><a href="{{.URL}}"><i class="fa fa-file-text" aria-hidden="true"></i>  {{ .Name }} </a></li>
+        <li><a href="{{.URL}}">&#9899; {{ .Name }} </a></li>
       {{end}}
     </ul>
 
     {{ if .RSSlink }}
-      <a class="blog-style u-pull-right" href="{{ .RSSlink }}"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+      <a class="blog-style u-pull-right" href="{{ .RSSlink }}">
+        <img src="/feed-icon-14x14.png" alt="feed">
+      </a>
     {{ end }}
   </div>
 </div>
