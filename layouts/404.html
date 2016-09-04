@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html {{with .Site.LanguageCode}}lang="{{.}}"{{end}}>
+
+{{ partial "head.html" . }}
+
+<body>
+  <div id="wrap">
+    <div id="main" class="container">
+      {{ partial "banner.html" . }}
+
+      <div class="row">
+        <div class="column">
+          <h4 id="article-title">404: Page not found</h4>
+          <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
+            <a href="{{ .Site.BaseURL }}">Head back home</a> to try finding it again.</p>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   {{ partial "footer.html" . }}
+</body>
+</html>

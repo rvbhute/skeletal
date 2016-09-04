@@ -1,0 +1,5 @@
+<p>
+  {{ range .Params.tags }}
+    <span class="tags"><i class="fa fa-tag" aria-hidden="true"></i> <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
+  {{ end }}
+</p>
