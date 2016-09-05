@@ -10,13 +10,13 @@
   <div class="column">
     <ul id="page-nav">
       {{ range .Site.Menus.main }}
-        <li><a href="{{.URL}}">&#9899; {{ .Name }} </a></li>
+        <li><a href="{{.URL}}">&sect; {{ .Name }} </a></li>
       {{end}}
     </ul>
 
     {{ if .RSSlink }}
       <a class="blog-style u-pull-right" href="{{ .RSSlink }}">
-        <img src="/feed-icon-14x14.png" alt="feed">
+        <img src="{{ .Site.BaseURL }}img/feed-icon-14x14.png" alt="feed">
       </a>
     {{ end }}
   </div>
