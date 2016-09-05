@@ -9,12 +9,13 @@ body {
 
 pre, code {
   font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
+  padding: 10px;
+  overflow-x: auto; /*scroll; */
 }
 
-code {
-  border: none;
-  border-radius: 0;
-  overflow-x: scroll;
+.highlight pre {
+  color: #d2d0d0;
 }
 
 h1, h2, h3, h4, h5, h6 {
