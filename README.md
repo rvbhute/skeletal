@@ -9,7 +9,6 @@ This theme looks for the following variables in your Hugo config:
 ``` yaml
 languageCode:    "en-us"
 title:           "My Hugo Blog"
-googleAnalytics: "UA-WXY-Z"
 params:
   Subtitle:       "my blog subtitle"
   Description:    "blog description"
