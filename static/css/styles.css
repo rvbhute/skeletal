@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,700';
 
+/* element styles */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -12,10 +13,6 @@ pre, code {
   font-size: 0.9em;
   padding: 10px;
   overflow-x: auto; /*scroll; */
-}
-
-.highlight pre {
-  color: #d2d0d0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,10 +29,21 @@ a {
   color: #222;
 }
 
+/* site-wide link styles */
 a.blog-style {
   color: #222;
 }
 
+a.blog-style:hover {
+  text-decoration: underline;
+}
+
+/* for pre content without specific syntax */
+.highlight pre {
+  color: #d2d0d0;
+}
+
+/* banner partial */
 #banner {
   margin-bottom: 20px;
 }
@@ -45,11 +53,7 @@ a.blog-style {
   margin-bottom: 0;
 }
 
-#blog-title a {
-  text-decoration: none;
-  color: #222;
-}
-
+/* banner partial - pages nav */
 ul#page-nav {
   list-style: none;
   float: left;
@@ -62,24 +66,24 @@ ul#page-nav li {
 ul#page-nav li a {
   text-transform: uppercase;
   padding-right: 10px;
-  color: #222;
 }
 
+/* list page - article list */
 ul#article-list {
   list-style: none;
 }
 
+/* also used in single page */
 .article-date {
   text-transform: uppercase;
   font-size: 0.75em;
 }
 
 .article-link {
-  text-decoration: none;
-  color: #222;
   font-size: 1.2em;
 }
 
+/* single page */
 #article-title {
   margin-bottom: 0;
 }
@@ -96,17 +100,14 @@ ul#article-list {
   text-decoration: underline;
 }
 
+/* tags partial */
 .tags {
   text-transform: uppercase;
   font-size: 0.8em;
   padding-right: 10px;
 }
 
-code.language-text {
-  color: #abb2bf;
-  background: #282c34;
-}
-
+/* pagination nav */
 nav.pagination {
   text-transform: uppercase;
   font-size: 0.8em;
@@ -118,6 +119,7 @@ nav.pagination {
   padding: 0 5px;
 }
 
+/* footer partial */
 #footer {
   font-size: 0.75em;
 }
