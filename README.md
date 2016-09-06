@@ -5,7 +5,7 @@ Skeletal theme for Hugo based on the Skeleton CSS Framework providing a minimali
 * [Skeleton](http://getskeleton.com/) v2.0.4
 
 #### There is no index.html file in this theme!
-Skeletal renders a list on its home page by desgin. I found the `index.html` converging on `_default\list.html`, hence
+Skeletal renders a list on its home page by design. I found the `index.html` converging on `_default\list.html`, hence
 I removed the `index.html` file. Hugo's documentation [mentions](https://gohugo.io/templates/homepage/) that:
 
 > Hugo will use the following prioritized list. If a file isn’t present, then the next one in the list will be used
