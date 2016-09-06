@@ -74,6 +74,10 @@ h5#list-title {
   margin-bottom: 1rem;
 }
 
+#feed-link img {
+  vertical-align: text-top;
+}
+
 ul#article-list {
   list-style: none;
 }

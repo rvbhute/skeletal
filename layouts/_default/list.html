@@ -12,7 +12,13 @@
         <div class="column">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 
-          <h5 id="list-title">{{ if eq .Title "" }}All Posts{{ else }}Posts with {{ .Data.Singular }} "{{ .Title }}"{{ end }}</h5>
+          <h5 id="list-title">
+            {{ if .Data.Singular }}Posts with {{ .Data.Singular }} "{{ .Title }}"{{ else }}All Posts{{ end }}
+
+            <a id="feed-link" href="{{ .RSSlink }}">
+              <img src="{{ .Site.BaseURL }}img/icon-rss.png" alt="feed">
+            </a>
+          </h5>
 
           <ul id="article-list">
             {{ range $index, $page := .Paginator.Pages }}

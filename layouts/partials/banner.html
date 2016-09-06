@@ -1,6 +1,5 @@
 <div class="row">
   <div class="column" id="banner">
-
     <h2 id="blog-title"><a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
     <small>{{ .Site.Params.Subtitle }}</small>
   </div>
@@ -13,11 +12,5 @@
         <li>&sect; <a class="blog-style" href="{{.URL}}">{{ .Name }} </a></li>
       {{end}}
     </ul>
-
-    {{ if .RSSlink }}
-      <a class="u-pull-right" href="{{ .RSSlink }}">
-        <img src="{{ .Site.BaseURL }}img/feed-icon-14x14.png" alt="feed">
-      </a>
-    {{ end }}
   </div>
 </div>
