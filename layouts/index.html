@@ -12,7 +12,7 @@
         <div class="column">
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 
-          <h5>All Posts</h5>
+          <h5 id="list-title">All Posts</h5>
 
           <ul id="article-list">
             {{ range $index, $page := .Paginator.Pages }}
