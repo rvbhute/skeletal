@@ -144,12 +144,12 @@ html, body {
 
 #main {
   overflow:auto;
-	padding-bottom: 40px; /* must be same height as the footer */
+	padding-bottom: 25px; /* must be same height as the footer */
 }
 
 #footer {
   position: relative;
-	margin-top: -40px; /* negative value of footer height */
-	height: 40px;
+	margin-top: -25px; /* negative value of footer height */
+	height: 25px;
 	clear:both;
 }
