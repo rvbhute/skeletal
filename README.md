@@ -14,8 +14,6 @@ params:
   Description:    "blog description"
   AuthorName:     "Author Name"
   CopyrightSince: "2016"
-pygmentsuseclasses: false
-pygmentscodefences: true
 ```
 Content with type as  "post" is listed on the index and list pages. List pages for a particular taxonomy classification
 are indicated as follows (example for tags): `Posts with tag "TAG"`. Only tag lists are being displayed and that too, on
