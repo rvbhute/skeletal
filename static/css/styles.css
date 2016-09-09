@@ -21,6 +21,8 @@ code {
   background-color: transparent;
   border: none;
   padding: 0;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 pre, code {
@@ -28,7 +30,7 @@ pre, code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 a {
@@ -122,6 +124,7 @@ ul#article-list {
 
 .article-image h6 {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .article-image img {

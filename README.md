@@ -21,14 +21,18 @@ I removed the `index.html` file. Hugo's documentation [mentions](https://gohugo.
 This theme looks for the following variables in your Hugo config:
 
 ``` yaml
-languageCode:    "en-us"
-title:           "My Hugo Blog"
+languageCode:       "en-us"
+title:              "My Hugo Blog"
+pygmentsUseClasses: false
+pygmentsCodeFences: true
 params:
   Subtitle:       "my blog subtitle"
   Description:    "blog description"
   AuthorName:     "Author Name"
   CopyrightSince: "2016"
 ```
+
+`pygments` settings are required for correct styling of code blocks.
 
 Only content with type as "post" is listed on the list page. List pages for a particular taxonomy classification are
 indicated as follows (example for tags): `Posts with tag "TAG"`. Only tag lists are being displayed and that too, on
