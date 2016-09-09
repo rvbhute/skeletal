@@ -5,12 +5,14 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="column">
-    <ul id="page-nav">
-      {{ range .Site.Menus.main }}
-        <li>&sect; <a class="blog-style" href="{{.URL}}">{{ .Name }} </a></li>
-      {{end}}
-    </ul>
+ {{ if $.Scratch.Get "pages" }}
+  <div class="row">
+    <div class="column">
+      <ul id="page-nav">
+        {{ range .Site.Menus.main }}
+          <li>&sect; <a class="blog-style" href="{{.URL}}">{{ .Name }}</a></li>
+        {{end}}
+      </ul>
+    </div>
   </div>
-</div>
+{{ end }}

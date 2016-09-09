@@ -1,21 +1,30 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,700';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:400,700';
 
 /* element styles */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  color: #222;
   background-color: #d2d0d0;
 }
 
+blockquote, dl, figure, form, ol, p, pre, table, ul {
+  margin-bottom: 1rem;
+}
+
 pre, code {
-  font-family: 'Source Code Pro', monospace;
-  overflow-x: auto; /*scroll; */
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 code {
   background-color: transparent;
   border: none;
+  padding: 0;
+}
+
+pre, code {
+  font-size: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,7 +38,7 @@ a {
 
 ::selection {
   background: #43a1e8;
-  color: #222;
+  color: white;
 }
 
 /* site-wide link styles */
@@ -44,6 +53,8 @@ a.blog-style:hover {
 /* for pre content without specific syntax */
 .highlight pre {
   color: #d2d0d0;
+  padding: 1rem;
+  overflow-x: auto; /*scroll; */
 }
 
 /* banner partial */
@@ -70,6 +81,7 @@ ul#page-nav li {
 ul#page-nav li a {
   text-transform: uppercase;
   padding-right: 10px;
+  font-size: 0.9em;
 }
 
 /* list page - article list */
@@ -104,12 +116,6 @@ ul#article-list {
   padding: 10px 0;
 }
 
-.article blockquote,
-.article ul,
-.article p {
-  margin-bottom: 1rem;
-}
-
 .article-image {
   text-align: center;
 }
@@ -121,7 +127,6 @@ ul#article-list {
 .article-image img {
   border: 1px solid black;
   border-radius: 5px;
-  margin-bottom: 1rem;
 }
 
 .article blockquote {
