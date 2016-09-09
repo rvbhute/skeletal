@@ -10,9 +10,12 @@ body {
 
 pre, code {
   font-family: 'Source Code Pro', monospace;
-  font-size: 0.9em;
-  padding: 10px;
   overflow-x: auto; /*scroll; */
+}
+
+code {
+  background-color: transparent;
+  border: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,7 +107,21 @@ ul#article-list {
 .article blockquote,
 .article ul,
 .article p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-image {
+  text-align: center;
+}
+
+.article-image h6 {
+  margin-bottom: 0;
+}
+
+.article-image img {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .article blockquote {

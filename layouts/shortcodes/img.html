@@ -1,0 +1,10 @@
+<div class="article-image">
+  {{ if .Get "caption" }}
+    {{ with .Get "caption"}}<h6>{{.}}</h6>{{ end }}
+  {{ end }}
+  <img class="u-max-full-width"
+    src="{{ .Get "src" }}"
+    {{ if .Get "alt" }}alt="{{ with .Get "alt" }}{{.}}{{ end }}"{{ end }}
+    {{ if .Get "title" }}title="{{ with .Get "title" }}{{.}}{{ end }}"{{ end }}
+  >
+</div>
