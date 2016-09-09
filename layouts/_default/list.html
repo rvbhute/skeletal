@@ -24,7 +24,7 @@
           <ul id="article-list">
             {{ range $index, $page := .Paginator.Pages }}
               <li>
-                <span class="article-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span><br>
+                <span class="article-date">{{ .Date.Format "Jan 2, 2006" }}</span><br>
                 <a class="article-link blog-style" href="{{ .Permalink }}">{{ .Title }}</a>
               </li>
             {{ end }}
