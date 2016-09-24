@@ -1,18 +1,8 @@
 <div class="row">
   <div class="column" id="banner">
-    <h2 id="blog-title"><a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
-    <small>{{ .Site.Params.Subtitle }}</small>
+    <h2 id="blog-title">
+      <a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      <small>{{ .Site.Params.Subtitle }}</small>
+    </h2>
   </div>
 </div>
-
- {{ if $.Scratch.Get "pages" }}
-  <div class="row">
-    <div class="column">
-      <ul id="page-nav">
-        {{ range .Site.Menus.main }}
-          <li>&sect; <a class="blog-style" href="{{.URL}}">{{ .Name }}</a></li>
-        {{end}}
-      </ul>
-    </div>
-  </div>
-{{ end }}

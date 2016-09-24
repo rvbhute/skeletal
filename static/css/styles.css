@@ -43,50 +43,61 @@ a {
   color: white;
 }
 
-/* site-wide link styles */
+/* ---- banner partial ---- */
+#banner {
+  margin-bottom: 1rem;
+}
+
+h2#blog-title {
+  margin-top: 5px;
+  border-bottom: 1px dashed #222;
+}
+
+h2#blog-title small {
+  font-size: 1.25rem;
+  letter-spacing: normal;
+}
+
 a.blog-style {
   color: #222;
 }
 
 a.blog-style:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
+/* ---- end banner partial ---- */
 
-/* for pre content without specific syntax */
-.highlight pre {
-  color: #d2d0d0;
-  padding: 1rem;
-  overflow-x: auto; /*scroll; */
-}
-
-/* banner partial */
-#banner {
-  margin-bottom: 1rem;
-}
-
-#blog-title {
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-
-/* banner partial - pages nav */
-ul#page-nav {
-  list-style: none;
-  float: left;
-  margin-bottom: 1rem;
-}
-
-ul#page-nav li {
-  display: inline;
-}
-
-ul#page-nav li a {
-  text-transform: uppercase;
-  padding-right: 10px;
+/* ---- footer partial ---- */
+#footer {
   font-size: 0.9em;
 }
 
-/* list page - article list */
+/*
+ * Sticky footer
+ * http://www.cssstickyfooter.com/using-sticky-footer-code.html
+ */
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+	padding-bottom: 50px; /* must be same height as the footer */
+}
+
+#footer {
+  position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;
+}
+/* ---- end footer partial ---- */
+
+/* ---- list page - article list ---- */
 h5#list-title {
   margin-bottom: 1rem;
 }
@@ -99,17 +110,17 @@ ul#article-list {
   list-style: none;
 }
 
-/* also used in single page */
-.article-date {
-  text-transform: uppercase;
-  font-size: 0.75em;
-}
-
 .article-link {
   font-size: 1.2em;
 }
 
-/* single page */
+.article-date { /* also used in single page */
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+/* ---- end list page - article list ---- */
+
+/* ---- single page ---- */
 #article-title {
   margin-bottom: 0;
 }
@@ -129,8 +140,9 @@ ul#article-list {
 }
 
 .article-image img {
-  border: 1px solid black;
+  border: 1px solid #222;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .article blockquote {
@@ -147,14 +159,22 @@ ul#article-list {
   text-decoration: underline;
 }
 
-/* tags partial */
+.highlight pre { /* for pre content without specific syntax */
+  color: #d2d0d0;
+  padding: 1rem;
+  overflow-x: auto; /*scroll; */
+}
+/* ---- end single page ---- */
+
+/* ---- tags partial ---- */
 .tags {
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding-right: 10px;
 }
+/* ---- end tags partial ---- */
 
-/* pagination nav */
+/* ---- pagination nav ---- */
 nav.pagination {
   text-transform: uppercase;
   font-size: 0.8em;
@@ -165,32 +185,4 @@ nav.pagination {
 .page-number {
   padding: 0 5px;
 }
-
-/* footer partial */
-#footer {
-  font-size: 0.75em;
-}
-
-/*
- * Sticky footer
- * http://www.cssstickyfooter.com/using-sticky-footer-code.html
- */
-html, body {
-  height: 100%;
-}
-
-#wrap {
-  min-height: 100%;
-}
-
-#main {
-  overflow:auto;
-	padding-bottom: 40px; /* must be same height as the footer */
-}
-
-#footer {
-  position: relative;
-	margin-top: -40px; /* negative value of footer height */
-	height: 40px;
-	clear:both;
-}
+/* ---- end pagination ---- */

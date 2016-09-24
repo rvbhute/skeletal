@@ -6,9 +6,6 @@
 <body>
   <div id="wrap">
     <div id="main" class="container">
-      {{ if eq .Type "page" }}
-        {{ $.Scratch.Add "pages" true }}
-      {{ end }}
       {{ partial "banner.html" . }}
 
       <div class="row">
