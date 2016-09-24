@@ -68,7 +68,7 @@ a.blog-style:hover {
 
 /* footer */
 #footer {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
   #footer .column {
@@ -170,7 +170,7 @@ ul#article-list {
 /* tags */
 .tags {
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding-right: 10px;
   white-space: nowrap;
 }
