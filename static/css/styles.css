@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400|Droid+Serif:400,700|Inconsolata:400,700';
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400|Droid+Serif:400,700|Droid+Mono:400';
 
 @media (min-width: 750px) {
   .container {
@@ -22,15 +22,16 @@ blockquote, dl, figure, form, ol, p, pre, table, ul {
 }
 
 pre, code {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Droid Mono', monospace;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 code {
   background-color: transparent;
   border: none;
   padding: 0;
-  font-weight: 700;
-  font-size: 100%;
+  font-size: 1em;
 }
 
 a {
@@ -73,6 +74,7 @@ a.blog-style:hover {
 
   #footer .column {
     border-top: 1px dashed #222;
+    padding-top:5px;
   }
 
 /**
@@ -89,13 +91,13 @@ html, body {
 
   #main {
     overflow:auto;
-    padding-bottom: 50px; /* VARIABLE must be same height as the footer */
+    padding-bottom: 55px; /* VARIABLE must be same height as the footer */
   }
 
 #footer {
   position: relative;
-	margin-top: -50px; /* VARIABLE negative value of footer height */
-	height: 50px; /* VARIABLE */
+	margin-top: -55px; /* VARIABLE negative value of footer height */
+	height: 55px; /* VARIABLE */
 	clear:both;
 }
 /* ---- end sticky footer ---- */
