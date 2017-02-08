@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400|Droid+Serif:400,700|Droid+Mono:400';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono');
 
 @media (min-width: 750px) {
   .container {
@@ -7,13 +7,13 @@
 }
 
 body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.6em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: normal;
 }
 
@@ -22,9 +22,9 @@ blockquote, dl, figure, form, ol, p, pre, table, ul {
 }
 
 pre, code {
-  font-family: 'Droid Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 code {
@@ -32,6 +32,7 @@ code {
   border: none;
   padding: 0;
   font-size: 1em;
+  white-space: normal;
 }
 
 a {
@@ -130,24 +131,9 @@ ul#article-list {
 }
 
 .article {
-  font-family: 'Droid Serif', serif;
   padding: 10px 0;
   line-height: 1.7;
 }
-
-  .article-image {
-    text-align: center;
-  }
-
-    .article-image h6 {
-      font-family: 'Droid Sans', sans-serif;
-    }
-
-    .article-image img {
-      border: 1px solid #222;
-      border-radius: 5px;
-      padding: 5px;
-    }
 
   .article blockquote {
     border-left: 2px solid #ab6f6f;
@@ -187,4 +173,20 @@ nav.pagination {
 
   .page-number {
     padding: 0 5px;
+  }
+
+/* style for figure shortcode */
+figure {
+  text-align: center;
+}
+
+  figure > img {
+      border: 1px solid #222;
+      border-radius: 5px;
+      padding: 5px;
+  }
+
+  figcaption > h4 {
+    font-size: 1rem;
+    font-weight: 400;
   }

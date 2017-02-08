@@ -1,7 +1,7 @@
 # skeletal
 Skeletal theme for Hugo based on the Skeleton CSS Framework providing a minimalist experience.
 
-* [Hugo](https://gohugo.io/) v0.16
+* [Hugo](https://gohugo.io/) v0.18
 * [Skeleton](http://getskeleton.com/) v2.0.4
 
 #### There is no index.html file in this theme!
@@ -32,15 +32,14 @@ params:
   CopyrightSince: "2016"
 ```
 
-`pygments` settings are required for correct styling of code blocks.
+`pygments` settings are required for correct styling of code blocks. It uses the monokai theme for code styling.
 
 Only content with type as "post" is listed on the list page. List pages for a particular taxonomy classification are
 indicated as follows (example for tags): `Posts with tag "TAG"`. Only tag lists are being displayed and that too, on
 the post page only.
 
-Menu items are generated from content with the following post matter:
+Menu items in footer are generated from content with the following post matter:
 
 ``` yaml
-type: page
 menu: main
 ```
