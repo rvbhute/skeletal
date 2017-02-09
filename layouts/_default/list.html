@@ -4,36 +4,30 @@
 {{ partial "head.html" . }}
 
 <body>
-  <div id="wrap">
-    <div id="main" class="container">
-      {{ partial "banner.html" . }}
+  <div class="container">
+    {{ partial "banner.html" . }}
 
-      <div class="row">
-        <div class="column">
-          {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    <div class="row">
+      <div class="col-xs-12">
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 
-          <h5 id="list-title">
-            {{ if .Data.Singular }}Posts with {{ .Data.Singular }} "{{ .Title }}"{{ else }}All Posts{{ end }}
+        {{ if .Data.Singular }}
+          <h3 id="list-title">Posts with {{ .Data.Singular }} <span class="tag-listing-title">"{{ .Title }}"</span></h3>
+        {{ end }}
 
-            <a id="feed-link" href="{{ .RSSLink }}">
-              <img src="{{ .Site.BaseURL }}img/icon-rss.png" alt="feed">
-            </a>
-          </h5>
+        <ul id="article-list">
+          {{ range $index, $page := .Paginator.Pages }}
+            <li>
+              <span class="article-date">{{ .Date.Format "Jan 2, 2006" }}</span><br>
+              <a class="article-link blog-style" href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
 
-          <ul id="article-list">
-            {{ range $index, $page := .Paginator.Pages }}
-              <li>
-                <span class="article-date">{{ .Date.Format "Jan 2, 2006" }}</span><br>
-                <a class="article-link blog-style" href="{{ .Permalink }}">{{ .Title }}</a>
-              </li>
-            {{ end }}
-          </ul>
-
-          {{ partial "pagination.html" $paginator }}
-        </div>
+        {{ partial "pagination.html" $paginator }}
       </div>
     </div>
-   </div>
+  </div> <!-- #main .container -->
 
    {{ partial "footer.html" . }}
 </body>

@@ -4,12 +4,12 @@
 name = "Skeletal"
 license = "MIT"
 licenselink = "https://github.com/rvbhute/skeletal/blob/master/LICENSE.md"
-description = "Skeletal theme for Hugo based on Skeleton Framework"
+description = "Skeletal theme for Hugo using the Bootstrap framework"
 homepage = "https://github.com/rvbhute/skeletal"
-tags = ["skeleton", "single column"]
-features = ["", ""]
-min_version = 0.16
+tags = ["bootstrap", "single column"]
+features = []
+min_version = 0.18
 
 [author]
   name = "Rohit Bhute"
-  homepage = ""
+  homepage = "https://rohitbhute.in"

@@ -4,27 +4,29 @@
 {{ partial "head.html" . }}
 
 <body>
-  <div id="wrap">
-    <div id="main" class="container">
-      {{ partial "banner.html" . }}
+  <div id="main" class="container">
+    {{ partial "banner.html" . }}
 
-      <div class="row">
-        <div class="column">
-          <h4 id="article-title">{{ .Title }}</h4>
+    <div class="row">
+      <div class="col-xs-12" id="post">
+        <h3 id="article-title">{{ .Title }}</h3>
 
-          {{ if ne .Type "page" }}
-            <span class="article-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if ne .Type "page" }}
+          <div class="article-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+        {{ end }}
+
+        <div class="article">
+          {{ .Content }}
+        </div>
+
+        <div>
+          {{ range .Params.tags }}
+            <span class="tags">#<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
           {{ end }}
-
-          <div class="article">
-            {{ .Content }}
-          </div>
-
-          {{ partial "tags.html" . }}
-	      </div>
-	    </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> <!-- #main .container -->
 
   {{ partial "footer.html" . }}
 </body>
