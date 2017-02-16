@@ -123,6 +123,11 @@ figcaption h6 {
   font-style: italic;
 }
 
+blockquote {
+  padding: 0 22px;
+  font-size: 0.9em;
+}
+
 .tags {
   text-transform: lowercase;;
   white-space: nowrap;
