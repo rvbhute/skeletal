@@ -25,7 +25,7 @@ languageCode:       "en-us"
 title:              "My Hugo Blog"
 pygmentsUseClasses: false
 pygmentsCodeFences: true
-pygmentsStyle: "trac"
+pygmentsStyle:      "trac"
 params:
   Subtitle:       "my blog subtitle"
   Description:    "blog description"
@@ -35,7 +35,8 @@ params:
 
 `pygments` settings are required for correct styling of code blocks. It uses the `trac` theme for code styling.
 
-Only content with type as **post** is listed on the list page and in the RSS feed. List pages for a particular taxonomy classification are indicated as follows (example for tags): `Posts with tag "example"`. Individual page posts display
+Only content with type as **post** is listed on the list page and in the RSS feed. List pages for a particular taxonomy
+classification are indicated as follows (example for tags): `Posts with tag "example"`. Individual page posts display
 tag lists if set.
 
 Menu items in footer are generated from content with the following post matter:
