@@ -22,7 +22,7 @@
 
         {{ if eq .Type "post" }}
           <div>
-            {{ range .Params.tags }}
+            {{ range sort .Params.tags }}
               <span class="tags">
                 <i class="fa fa-tag" aria-hidden="true"></i>
                 <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>

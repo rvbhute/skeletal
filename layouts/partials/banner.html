@@ -6,7 +6,7 @@
 
   <div class="col-sm-6 col-xs-12">
     <ul id="page-nav">
-      {{ range .Site.Menus.main }}
+      {{ range sort .Site.Menus.main }}
         <li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="{{.URL}}">{{ .Name }}</a></li>
       {{ end }}
 
