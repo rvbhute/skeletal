@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html {{with .Site.LanguageCode}}lang="{{.}}"{{end}}>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
 
 {{ partial "head.html" . }}
 
-<body>
-  <div id="main" class="container">
+<body id="single">
+  <div class="container">
+
     {{ partial "banner.html" . }}
 
     <div class="row">
-      <div class="col-xs-12" id="post">
+      <div class="col-xs-12" id="page-content">
         <h3 id="article-title">{{ .Title }}</h3>
 
-        {{ if ne .Type "page" }}
+        {{ if eq .Type "post" }}
           <div class="article-date">{{ .Date.Format "Jan 2, 2006" }}</div>
         {{ end }}
 
@@ -19,11 +20,16 @@
           {{ .Content }}
         </div>
 
-        <div>
-          {{ range .Params.tags }}
-            <span class="tags">#<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></span>
-          {{ end }}
-        </div>
+        {{ if eq .Type "post" }}
+          <div>
+            {{ range .Params.tags }}
+              <span class="tags">
+                <i class="fa fa-tag" aria-hidden="true"></i>
+                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+              </span>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     </div>
   </div> <!-- #main .container -->

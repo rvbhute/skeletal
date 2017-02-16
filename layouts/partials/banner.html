@@ -1,10 +1,16 @@
 <div class="row">
-  <div class="col-xs-12" id="blog-title">
-    <h1>
-      <a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </h1>
+  <div class="col-sm-6 col-xs-12" id="blog-title">
+    <h3><a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h3>
     <small>{{ .Site.Params.Subtitle }}</small>
+  </div>
 
-    <hr>
+  <div class="col-sm-6 col-xs-12">
+    <ul id="page-nav">
+      {{ range .Site.Menus.main }}
+        <li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="{{.URL}}">{{ .Name }}</a></li>
+      {{ end }}
+
+      <li><i class="fa fa-rss" aria-hidden="true"></i> <a href="{{ .Site.RSSLink }}">Feed</a></li>
+    </ul>
   </div>
 </div>

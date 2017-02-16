@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html {{with .Site.LanguageCode}}lang="{{.}}"{{end}}>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
 
 {{ partial "head.html" . }}
 
-<body>
+<body id="list">
   <div class="container">
+
     {{ partial "banner.html" . }}
 
     <div class="row">
-      <div class="col-xs-12">
-        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+      <div class="col-xs-12" id="page-content">
+        {{ $p := .Paginate (where .Data.Pages "Type" "post") }}
 
         {{ if .Data.Singular }}
           <h3 id="list-title">Posts with {{ .Data.Singular }} <span class="tag-listing-title">"{{ .Title }}"</span></h3>
         {{ end }}
 
         <ul id="article-list">
-          {{ range $index, $page := .Paginator.Pages }}
+          {{ range $index, $page := $p.Pages }}
             <li>
               <span class="article-date">{{ .Date.Format "Jan 2, 2006" }}</span><br>
               <a class="article-link blog-style" href="{{ .Permalink }}">{{ .Title }}</a>
@@ -24,11 +25,22 @@
           {{ end }}
         </ul>
 
-        {{ partial "pagination.html" $paginator }}
+        <nav class="pagination">
+          {{ if $p.HasPrev }}
+            <a class="newer-posts" href="{{ $p.Prev.URL }}"><b>&laquo;</b> Newer</a>
+          {{ end }}
+
+          <span class="page-number">Page {{ $p.PageNumber }} of {{ $p.TotalPages }}</span>
+
+          {{ if $p.HasNext }}
+            <a class="older-posts" href="{{ $p.Next.URL }}">Older <b>&raquo;</b></a>
+          {{ end }}
+        </nav>
       </div>
     </div>
   </div> <!-- #main .container -->
 
-   {{ partial "footer.html" . }}
+  {{ partial "footer.html" . }}
+
 </body>
 </html>

@@ -1,15 +1,7 @@
 <footer class="footer">
   <div class="container">
     <hr>
-
-    &copy; {{  .Site.Params.CopyrightSince }} &ndash; {{ .Now.Year }} {{ .Site.Params.AuthorName }}
-
-    {{ range .Site.Menus.main }}
-      &nbsp;&bull;&nbsp; <a href="{{.URL}}">{{ .Name }}</a>
-    {{end}}
-
-    &nbsp;&bull;&nbsp; <a href="{{ .RSSLink }}">Feed</a>
-
+    &copy; {{ .Site.Params.CopyrightSince }} &ndash; {{ .Now.Year }} {{ .Site.Params.AuthorName }}
     <br>
     Built with
       <a href="https://gohugo.io/" target="_blank">Hugo</a>,

@@ -3,10 +3,10 @@ Skeletal theme for Hugo providing a minimalist experience using a trimmed down B
 
 * [Hugo](https://gohugo.io/) v0.18
 * [Bootstrap](https://getbootstrap.com/) v3.3.7
+* [Font Awesome](http://fontawesome.io/) v4.7.0
 
 #### There is no index.html file in this theme!
-Skeletal renders a list on its home page by design. I found the `index.html` converging on `_default\list.html`, hence
-I removed the `index.html` file. Hugo's documentation [mentions](https://gohugo.io/templates/homepage/) that:
+Skeletal renders a list on its home page by design. See Hugo's [documentation](https://gohugo.io/templates/homepage/).
 
 > Hugo will use the following prioritized list. If a file isn’t present, then the next one in the list will be used
 
@@ -33,11 +33,10 @@ params:
   CopyrightSince: "2016"
 ```
 
-`pygments` settings are required for correct styling of code blocks. It uses the trac theme for code styling.
+`pygments` settings are required for correct styling of code blocks. It uses the `trac` theme for code styling.
 
-Only content with type as "post" is listed on the list page. List pages for a particular taxonomy classification are
-indicated as follows (example for tags): `Posts with tag "example"`. Only tag lists are being displayed and that too, on
-the post page only.
+Only content with type as **post** is listed on the list page and in the RSS feed. List pages for a particular taxonomy classification are indicated as follows (example for tags): `Posts with tag "example"`. Individual page posts display
+tag lists if set.
 
 Menu items in footer are generated from content with the following post matter:
 
