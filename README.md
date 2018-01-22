@@ -1,14 +1,14 @@
 # skeletal
-Skeletal theme for Hugo providing a minimalist experience using a trimmed down Bootstrap framework.
+Skeletal theme for Hugo providing a minimalist experience using Bootstrap framework.
 
 * [Hugo](https://gohugo.io/) v0.33
 * [Bootstrap](https://getbootstrap.com/) v4.0.0
 * [Font Awesome](http://fontawesome.io/) v4.7.0
 
 #### There is no index.html file in this theme!
-Skeletal renders a list on its home page by design. See Hugo's [documentation](https://gohugo.io/templates/homepage/).
+Skeletal renders a list on its home page by design. See Hugo's [documentation](https://gohugo.io/templates/lookup-order/).
 
-> Hugo will use the following prioritized list. If a file isn’t present, then the next one in the list will be used
+> Hugo will use a prioritized list. If a file isn’t present, then the next one in the list will be used.
 
 ```
 ... [layouts] ...
