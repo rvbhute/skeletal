@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container">
     <hr>
-    &copy; {{ .Site.Params.CopyrightSince }} &ndash; {{ .Now.Year }} {{ .Site.Params.AuthorName }}
+    &copy; {{ .Site.Params.CopyrightSince }} &ndash; {{ now.Format "2006" }} {{ .Site.Params.AuthorName }}
     <br>
     Built with
       <a href="https://gohugo.io/" target="_blank">Hugo</a>,

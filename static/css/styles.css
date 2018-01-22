@@ -26,6 +26,10 @@ body {
   }
 }
 
+body {
+  line-height: 1.7;
+}
+
 /* banner partial */
 #blog-title > h3 {
   margin-bottom: 0;
@@ -126,6 +130,11 @@ figcaption h6 {
 blockquote {
   padding: 0 22px;
   font-size: 0.9em;
+}
+
+pre code {
+  white-space: pre;
+  overflow-y: scroll;
 }
 
 .tags {
