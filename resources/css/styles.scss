@@ -20,7 +20,7 @@ $non-mobile: "only screen and (min-width: 576px)";
 @import 'stickyfooter';
 
 body {
-  line-height: 1.2;
+  line-height: 1.5;
   font-size: 16px;
   color: $primary-color;
   font-family: 'Open Sans', sans-serif;
@@ -30,13 +30,13 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-/* list views */
 #page-content {
   @media #{$non-mobile} {
     margin-top: 20px;
   }
 }
 
+// list view
 #article-list {
   list-style: none;
   padding-left: 0;
@@ -56,13 +56,14 @@ pre, code {
   font-size: 0.6em;
 }
 
+// date on article page
 body#single {
   .article-date {
     padding-bottom: 8px;
   }
 }
 
-/* used on list page for a given tag */
+// used on list page for a given tag
 #list-title {
   margin-top: 0;
 }
@@ -71,7 +72,7 @@ body#single {
   text-transform: lowercase;
 }
 
-/* pagination */
+// pagination
 #pagination {
   text-transform: uppercase;
   text-align: center;
@@ -87,4 +88,3 @@ body#single {
   padding: 0 5px;
   font-size: 0.8em;
 }
-

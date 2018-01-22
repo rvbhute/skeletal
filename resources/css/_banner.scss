@@ -1,8 +1,8 @@
 #blog-title {
   text-align: center;
 
-  h3 {
-    margin-bottom: -10px;
+  h2 {
+    margin-bottom: -6px;
     margin-top: 10px;
 
     a {
@@ -24,7 +24,7 @@
 
   li {
     display: inline;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     padding-left: 10px;
 
     a {
@@ -42,8 +42,8 @@
 /* this is on article page */
 body#single {
   #blog-title {
-    h3 {
-      font-size: 1em;
+    h2 {
+      font-size: 1rem;
       margin-bottom: 10px;
     }
   }
