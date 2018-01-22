@@ -1,8 +1,8 @@
 # skeletal
 Skeletal theme for Hugo providing a minimalist experience using a trimmed down Bootstrap framework.
 
-* [Hugo](https://gohugo.io/) v0.18
-* [Bootstrap](https://getbootstrap.com/) v3.3.7
+* [Hugo](https://gohugo.io/) v0.33
+* [Bootstrap](https://getbootstrap.com/) v4.0.0
 * [Font Awesome](http://fontawesome.io/) v4.7.0
 
 #### There is no index.html file in this theme!
@@ -32,8 +32,6 @@ params:
   AuthorName:     "Author Name"
   CopyrightSince: "2016"
 ```
-
-`pygments` settings are required for correct styling of code blocks. It uses the `trac` theme for code styling.
 
 Only content with type as **post** is listed on the list page and in the RSS feed. List pages for a particular taxonomy
 classification are indicated as follows (example for tags): `Posts with tag "example"`. Individual page posts display
