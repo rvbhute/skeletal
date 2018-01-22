@@ -11,12 +11,14 @@
     {{- if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ .Site.Title -}}
   </title>
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="{{ .Site.BaseURL }}css/styles.css" rel="stylesheet">
   <link href="{{ .Site.BaseURL }}img/favicon.png" rel="icon" type="image/png">
-  <link rel="alternate" href="{{ .Site.RSSLink }}"  type="application/rss+xml" title="{{ .Site.Title }}">
+  {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
 
   {{ template "_internal/google_analytics_async.html" . }}
 </head>

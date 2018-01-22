@@ -1,0 +1,60 @@
+#article {
+  line-height: 1.6;
+  a {
+    @include styled-link();
+  }
+}
+
+figure {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+figcaption {
+  h6 {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+}
+
+blockquote {
+  padding: 0 22px;
+  font-size: 0.9em;
+}
+
+/* flex use */
+.tags {
+  text-transform: lowercase;;
+  white-space: nowrap;
+  font-size: 0.9em;
+  padding-right: 10px;
+  display: inline-block;
+  a {
+    @include styled-link();
+  }
+}
+
+/* pre style taken from Bootstrap 3.3.7 */
+pre {
+  display: block;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $primary-color;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  code {
+    white-space: pre;
+    overflow-y: scroll;
+  }
+}
+
+code {
+  font-size: 15px;
+  color: #850404;
+}

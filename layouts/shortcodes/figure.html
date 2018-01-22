@@ -1,5 +1,5 @@
 <figure>
-  <img src="{{ .Get "src" }}" class="img-responsive img-thumbnail" />
+  <img src="{{ .Get "src" }}" class="img-fluid img-thumbnail" />
   {{ if .Get "caption" }}
     <figcaption>
         {{ with .Get "caption"}}<h6>{{.}}</h6>{{ end }}

@@ -1,0 +1,11 @@
+footer {
+  font-size: 0.8em;
+  a {
+    @include styled-link();
+  }
+
+  hr {
+    border-top: 1px dashed #222;
+    margin-bottom: 5px;
+  }
+}

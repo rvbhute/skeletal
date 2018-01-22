@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Ubuntu+Mono');
+
+$primary-color: #222;
+$non-mobile: "only screen and (min-width: 576px)";
+
+// style for href tag
+@mixin styled-link() {
+  color: #000;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+
+  &:hover {
+    text-decoration-style: solid;
+  }
+}
+
+@import 'article';
+@import 'banner';
+@import 'footer';
+@import 'stickyfooter';
+
+body {
+  line-height: 1.2;
+  font-size: 16px;
+  color: $primary-color;
+  font-family: 'Open Sans', sans-serif;
+}
+
+pre, code {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/* list views */
+#page-content {
+  @media #{$non-mobile} {
+    margin-top: 20px;
+  }
+}
+
+#article-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-bottom: 10px;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.article-date {
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+
+body#single {
+  .article-date {
+    padding-bottom: 8px;
+  }
+}
+
+/* used on list page for a given tag */
+#list-title {
+  margin-top: 0;
+}
+
+.tag-title {
+  text-transform: lowercase;
+}
+
+/* pagination */
+#pagination {
+  text-transform: uppercase;
+  text-align: center;
+
+  a.arrows {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+#page-number {
+  padding: 0 5px;
+  font-size: 0.8em;
+}
+

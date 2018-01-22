@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-sm-6 col-xs-12" id="blog-title">
+  <div class="col-12 col-sm-6" id="blog-title">
     <h3><a class="blog-style" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h3>
-    <small>{{ .Site.Params.Subtitle }}</small>
+    <small class="single-hide">{{ .Site.Params.Subtitle }}</small>
   </div>
 
-  <div class="col-sm-6 col-xs-12">
-    <ul id="page-nav">
+  <div class="col-12 col-sm-6">
+    <ul id="page-nav" class="single-hide">
       {{ range sort .Site.Menus.main }}
         <li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a href="{{.URL}}">{{ .Name }}</a></li>
       {{ end }}

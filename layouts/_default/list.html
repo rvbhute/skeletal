@@ -9,11 +9,11 @@
     {{ partial "banner.html" . }}
 
     <div class="row">
-      <div class="col-xs-12" id="page-content">
+      <div class="col" id="page-content">
         {{ $p := .Paginate (where .Data.Pages "Type" "post") }}
 
         {{ if .Data.Singular }}
-          <h3 id="list-title">Posts with {{ .Data.Singular }} <span class="tag-listing-title">"{{ .Title }}"</span></h3>
+          <h4 id="list-title">Posts with {{ .Data.Singular }} <span class="tag-title">"{{ .Title }}"</span></h4>
         {{ end }}
 
         <ul id="article-list">
@@ -25,17 +25,17 @@
           {{ end }}
         </ul>
 
-        <nav class="pagination">
+        <div id="pagination">
           {{ if $p.HasPrev }}
-            <a class="newer-posts" href="{{ $p.Prev.URL }}"><b>&laquo;</b> Newer</a>
+            <a class="arrows" href="{{ $p.Prev.URL }}">&#8612;</a>
           {{ end }}
 
-          <span class="page-number">Page {{ $p.PageNumber }} of {{ $p.TotalPages }}</span>
+          <span id="page-number">Page {{ $p.PageNumber }} of {{ $p.TotalPages }}</span>
 
           {{ if $p.HasNext }}
-            <a class="older-posts" href="{{ $p.Next.URL }}">Older <b>&raquo;</b></a>
+            <a class="arrows" href="{{ $p.Next.URL }}">&#8614;</a>
           {{ end }}
-        </nav>
+        </div>
       </div>
     </div>
   </div> <!-- #main .container -->

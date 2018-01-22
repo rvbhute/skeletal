@@ -9,14 +9,14 @@
     {{ partial "banner.html" . }}
 
     <div class="row">
-      <div class="col-xs-12" id="page-content">
-        <h3 id="article-title">{{ .Title }}</h3>
+      <div class="col" id="page-content">
+        <h4 id="article-title">{{ .Title }}</h4>
 
         {{ if eq .Type "post" }}
           <div class="article-date">{{ .Date.Format "Jan 2, 2006" }}</div>
         {{ end }}
 
-        <div class="article">
+        <div id="article">
           {{ .Content }}
         </div>
 
