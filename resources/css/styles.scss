@@ -31,6 +31,12 @@ pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
 
+@media (min-width: 992px) {
+  #main {
+    max-width: 750px;
+  }
+}
+
 #page-content {
   @media #{$non-mobile} {
     margin-top: 20px;

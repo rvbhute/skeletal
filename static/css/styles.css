@@ -127,6 +127,9 @@ body {
 pre, code {
   font-family: 'Ubuntu Mono', monospace; }
 
+@media (min-width: 992px) {
+  #main {
+    max-width: 750px; } }
 @media only screen and (min-width: 576px) {
   #page-content {
     margin-top: 20px; } }
